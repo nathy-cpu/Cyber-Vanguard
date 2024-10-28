@@ -1,0 +1,12 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/Vanguard/urls.py 1730145641 1020
+
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.admin: Never
+.___v_desugar_2 = pyimport "Failure"
+
+.path: Never
+.___v_desugar_3 = pyimport "Failure"
+
+.views: Never
+.urlpatterns: Never

@@ -1,0 +1,10 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/forms.py 1730142877 207
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.forms: Never
+.___v_desugar_2 = pyimport "models"
+.models = pyimport "models"
+.ContactMessage: {models.ContactMessage}
+.ContactForm: ClassType
+.ContactForm <: Never
+

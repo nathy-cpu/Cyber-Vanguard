@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Vanguard Club - Home</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <h1>Cyber Vanguard</h1>
+    </div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'join' %}">Join Us</a>
+      <a href="{% url 'events' %}">Events</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Home Page Content -->
+  <section class="section" id="home">
+    <!-- Typing Animation for Welcome Message with Increased Text Size -->
+    <h1 class="typing-animation large-text">Welcome to Cyber Vanguard</h1>
+    <h3 class="large-text">Your gateway to mastering cybersecurity at AAiT</h3>
+
+    <!-- Topics Block -->
+    <div class="home-block">
+      <h2>Topics We Cover</h2>
+      <div class="topics-grid">
+        <div>Network Security</div>
+        <div>System Defense</div>
+        <div>Cryptography</div>
+        <div>Data Privacy</div>
+        <div>Malware Analysis</div>
+        <div>CTFs</div>
+      </div>
+    </div>
+
+    <!-- Join Us Block -->
+    <div class="home-block join-us-block">
+      <div class="join-box">
+        <a href="join.html" class="join-link">Join Us</a>
+      </div>
+      <p>All AAU cyber enthusiast students are welcome to join!!</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Cyber Vanguard Club, AAIT</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

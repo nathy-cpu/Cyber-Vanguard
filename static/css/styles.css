@@ -1,0 +1,324 @@
+/* General Variables */
+:root {
+  --bg-color: #121212;
+  --primary-color: #ff0055;
+  --secondary-color: #8822cc;
+  --text-color: #ffffff;
+  --accent-color: #00ffcc;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 4em 1em;
+  text-align: center;
+}
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 1em;
+  position: relative;
+}
+
+header nav a {
+  color: var(--accent-color);
+  margin-left: 1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  gap: 1em;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Collapsible Navbar for Smaller Screens */
+.navbar-active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* Hide Navbar Links and Show Menu Icon */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1em 0;
+  }
+
+  .navbar a {
+    padding: 0.5em 1em;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Responsive Layout for Blocks and Content */
+.home-block, .about-block, .topics-grid {
+  max-width: 100%;
+  padding: 2em;
+  margin: 1em auto;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+  text-align: center;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Typing Animation */
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--primary-color);
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-color); }
+}
+
+/* Large Text */
+.large-text {
+  font-size: 1.5em;
+}
+
+.large-text h1,
+.large-text h2,
+.large-text h3,
+.large-text p {
+  font-size: 1.8em;
+}
+
+/* Vertical Form Layout */
+.vertical-form label,
+.vertical-form input,
+.vertical-form textarea,
+.vertical-form button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0.5em auto;
+}
+
+/* Home Page Blocks */
+.home-block {
+  background-color: #1a1a1a;
+  padding: 2em;
+  border-radius: 8px;
+  margin: 1em auto;
+  max-width: 700px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.home-block h1 {
+  color: var(--primary-color);
+  
+}
+
+.home-block h3 {
+  color: var(--accent-color);
+  margin-top: 0.5em;
+}
+
+.home-block h2 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+/* Topics Grid */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+  text-align: center;
+}
+
+.topics-grid div {
+  background-color: #2b2b2b;
+  padding: 1em;
+  border-radius: 8px;
+  color: var(--text-color);
+}
+
+/* Join Us Block */
+.join-us-block {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+}
+
+.join-box {
+  background-color: var(--primary-color);
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+.join-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.join-link:hover {
+  color: var(--accent-color);
+}
+
+/* About Us Styling */
+#about h2 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.about-block {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1em auto;
+  max-width: 800px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.about-block h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5em;
+}
+
+.about-block p {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+/* Acronym List */
+.acronym ul {
+  list-style: none;
+  padding: 0;
+}
+
+.acronym li {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.acronym li strong {
+  color: var(--primary-color);
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+
+
+
+/* Home Page - Increase Space for Typing Animation and Large Text */
+.typing-animation.large-text {
+  margin-top: 3em;     /* Adds space above the h1 */
+  margin-bottom: 1em;  /* Adds space between h1 and h3 */
+  font-size: 3em;    /* Optional: Larger font size for emphasis */
+}
+
+.large-text + .large-text {
+  margin-top: 1em;     /* Adds space between h3 and the next section */
+  margin-bottom: 3em;  /* Adds space below h3 */
+  font-size: 2.5em;    /* Optional: Adjust font size for h3 */
+}
+
+
+
+
+
+
+
+
+
+
+/* Navbar and Menu Icon for Mobile */
+.navbar {
+  display: flex;
+  gap: 1em;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Initially hide navbar */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+  }
+
+  .navbar-active {
+    display: flex; /* Show navbar when active */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on small screens */
+  }
+}

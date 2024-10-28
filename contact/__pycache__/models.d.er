@@ -1,0 +1,12 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/models.py 1730142814 317
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.models: Never
+.ContactMessage: ClassType
+.ContactMessage <: Never
+.ContactMessage.name: Never
+.ContactMessage.email: Never
+.ContactMessage.phone_number: Never
+.ContactMessage.message: Never
+.ContactMessage.__str__: (self: models.ContactMessage) -> Never
+

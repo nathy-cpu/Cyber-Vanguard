@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Vanguard Club - Contact Us</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <h1>Cyber Vanguard</h1>
+    </div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'join' %}">Join Us</a>
+      <a href="{% url 'events' %}">Events</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+
+  <!-- Contact Us Content -->
+  <section class="section" id="contact">
+    <h2>Contact Cyber Vanguard</h2>
+    <form method="post" id="contact-form" class="vertical-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Cyber Vanguard Club, AAIT</p>
+  </footer>
+</body>
+
+</html>

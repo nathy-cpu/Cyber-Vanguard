@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Vanguard Club - Events</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <h1>Cyber Vanguard</h1>
+    </div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'join' %}">Join Us</a>
+      <a href="{% url 'events' %}">Events</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Events Page Content -->
+  <section class="section centered large-text" id="events">
+    <h2 class="typing-animation">Upcoming Events</h2>
+    <p class="typing-animation">Coming Soon...</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Cyber Vanguard Club, AAIT</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

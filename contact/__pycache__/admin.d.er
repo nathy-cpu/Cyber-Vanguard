@@ -1,0 +1,8 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/admin.py 1730143334 134
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.admin: Never
+.___v_desugar_2 = pyimport "models"
+.models = pyimport "models"
+.ContactMessage: {models.ContactMessage}
+

@@ -1,0 +1,22 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/Vanguard/settings.py 1730145725 3345
+
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.Path: Never
+.BASE_DIR: {Never}
+.SECRET_KEY: {"django-insecure-k#ro3))!$vryd)20wmre0zytm=9knoo2+)4ums1v#w*wd1ltg^"}
+.DEBUG: {True}
+.ALLOWED_HOSTS: Never
+.INSTALLED_APPS: Never
+.MIDDLEWARE: Never
+.ROOT_URLCONF: {"Vanguard.urls"}
+.TEMPLATES: Never
+.WSGI_APPLICATION: {"Vanguard.wsgi.application"}
+.DATABASES: Never
+.AUTH_PASSWORD_VALIDATORS: Never
+.LANGUAGE_CODE: {"en-us"}
+.TIME_ZONE: {"UTC"}
+.USE_I18N: {True}
+.USE_TZ: {True}
+.STATIC_URL: {"static/"}
+.DEFAULT_AUTO_FIELD: {"django.db.models.BigAutoField"}

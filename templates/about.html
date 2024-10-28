@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Vanguard Club - About Us</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <h1>Cyber Vanguard</h1>
+    </div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'join' %}">Join Us</a>
+      <a href="{% url 'events' %}">Events</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+
+  <!-- About Us Content -->
+  <section class="section" id="about">
+    <h2>About Cyber Vanguard</h2>
+
+    <!-- Mission and Vision Blocks -->
+    <div class="about-block">
+      <h3>Mission</h3>
+      <p>The Cyber Security Club aims to bridge the gap between theoretical knowledge and practical skills in
+        cybersecurity through hands-on learning, interdisciplinary collaboration, and community outreach. We strive to
+        equip members with the tools and experiences needed to excel in the cybersecurity field, promote ethical
+        practices, and foster a culture of continuous learning and innovation. By engaging with industry professionals,
+        participating in competitions, and addressing real-world cybersecurity challenges, we seek to empower our
+        members to become responsible leaders in securing the digital future.</p>
+    </div>
+
+    <div class="about-block">
+      <h3>Vision</h3>
+      <p>To create a leading community of cybersecurity professionals and enthusiasts, fostering innovation,
+        collaboration, and excellence, while empowering students to protect the digital world and solve real-world
+        cybersecurity challenges.</p>
+    </div>
+
+    <!-- Acronym Block -->
+    <div class="about-block acronym">
+      <h3>VANGUARD</h3>
+      <ul>
+        <li><strong>V</strong> - Vigilant</li>
+        <li><strong>A</strong> - Adaptive</li>
+        <li><strong>N</strong> - Networked</li>
+        <li><strong>G</strong> - Growth</li>
+        <li><strong>U</strong> - United</li>
+        <li><strong>A</strong> - Ambitious</li>
+        <li><strong>R</strong> - Resposible</li>
+        <li><strong>D</strong> - Dynamic</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Cyber Vanguard Club, AAIT</p>
+  </footer>
+</body>
+
+</html>

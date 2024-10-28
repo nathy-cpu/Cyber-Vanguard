@@ -1,0 +1,22 @@
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/views.py 1730145891 726
+.___v_desugar_1 = pyimport "Failure"
+.Failure = pyimport "Failure"
+.render: Never
+.redirect: Never
+.___v_desugar_2 = pyimport "forms"
+.forms = pyimport "forms"
+.ContactForm: {forms.ContactForm}
+.contact: |Type_1318 <: Structural({.POST = Type_1334; .method = E}), Type_1334: Type, E :> {"POST"}|(request: Type_1318) -> Never
+.success: (request: Obj) -> Never
+.about: (request: Obj) -> Never
+.events: (request: Obj) -> Never
+.index: (request: Obj) -> Never
+.join: (request: Obj) -> Never
+
+r
+r
+
+r
+r
+r
+
