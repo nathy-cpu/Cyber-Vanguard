@@ -1,4 +1,4 @@
-##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/models.py 1730142814 317
+##[pylyzer] failed /home/nathnael/PythonProjects/DjangoProjects/Vanguard/contact/models.py 1730157306 314
 .___v_desugar_1 = pyimport "Failure"
 .Failure = pyimport "Failure"
 .models: Never
