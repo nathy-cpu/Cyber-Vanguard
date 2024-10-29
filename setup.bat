@@ -38,7 +38,7 @@ pip install django psycopg2-binary
 :: Clone the repository
 echo Cloning the repository...
 git clone https://github.com/nathy-cpu/Cyber-Vanguard.git
-cd Vanguard
+cd Cyber-Vanguard
 
 :: Set up PostgreSQL
 echo Setting up PostgreSQL database...
