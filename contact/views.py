@@ -29,7 +29,3 @@ def events(request):
 
 def index(request):
     return render(request, "index.html")
-
-
-def join(request):
-    return render(request, "join.html")

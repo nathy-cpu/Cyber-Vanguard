@@ -1,4 +1,6 @@
 #!/bin/bash
+# Change to the home directory
+cd ~/
 
 # Update system packages
 echo "Updating system packages..."
@@ -14,19 +16,6 @@ sudo apt-get install -y python3-pip
 echo "Installing PostgreSQL..."
 sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
-# Install Git
-echo "Installing Git..."
-sudo apt-get install -y git
-
-# Install Python packages
-echo "Installing Python packages..."
-pip3 install django psycopg2-binary
-
-# Clone the repository
-echo "Cloning the repository..."
-git clone https://github.com/nathy-cpu/Cyber-Vanguard.git
-cd Cyber-Vanguard
-
 # Create PostgreSQL user and database
 echo "Setting up PostgreSQL..."
 sudo -u postgres psql <<EOF
@@ -38,6 +27,23 @@ CREATE DATABASE vanguard OWNER vanguard;
 \q
 EOF
 
+# Install Python packages
+echo "Installing Python packages..."
+pip3 install django psycopg2-binary
+
+# Install Git
+echo "Installing Git..."
+sudo apt-get install -y git
+
+# Clone the repository
+echo "Cloning the repository..."
+git clone https://github.com/nathy-cpu/Cyber-Vanguard.git
+cd Cyber-Vanguard
+
+# Setting up a virtual environment
+python3 -m venv Cyber-Vanguard
+source Cyber-Vanguard/bin/activate
+
 # Make migrations and migrate
 echo "Setting up Django database..."
 python3 manage.py makemigrations
@@ -47,9 +53,18 @@ python3 manage.py migrate
 echo "Collecting static files..."
 python3 manage.py collectstatic --noinput
 
+# Create admin user
+echo "Creating admin superuser..."
+python3 manage.py createsuperuser
+
+
 # Create superuser (optional, commented out)
-# echo "Creating superuser..."
-# python3 manage.py createsuperuser
+echo "Creating superuser..."
+python3 manage.py createsuperuser << EOF
+admin
+12345678
+12345678
+EOF
 
 # Set proper permissions
 echo "Setting permissions..."

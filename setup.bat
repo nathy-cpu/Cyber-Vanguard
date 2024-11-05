@@ -35,6 +35,11 @@ if %errorlevel% neq 0 (
 echo Installing Python packages...
 pip install django psycopg2-binary
 
+:: Setting up a virtual environment
+python3 -m venv Cyber-Vanguard
+source Cyber-Vanguard/bin/activate
+
+
 :: Clone the repository
 echo Cloning the repository...
 git clone https://github.com/nathy-cpu/Cyber-Vanguard.git
